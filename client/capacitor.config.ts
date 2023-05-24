@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'bgacb-client',
+  appName: 'client',
   webDir: 'dist',
   server: {
     androidScheme: 'https'

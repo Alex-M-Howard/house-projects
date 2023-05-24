@@ -6,13 +6,16 @@ phases:
       nodejs: 16
   pre_build:
     commands:
-      - echo Installing app source NPM dependencies...
-      - cd client && npm install
+      - echo Installing api source NPM dependencies...
+      - npm install -g typescript
+      - npm install
   build:
     commands:
-      - npm run build:prod --verbose
+      - npm run build
 # Include only the files required for your application to run.
 artifacts:
   files:
-    - "**/*"
-  base-directory: client/dist
+    - package.json
+    - package-lock.json,
+    - "dist/**/*"
+  discard-paths: no
